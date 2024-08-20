@@ -42,6 +42,13 @@ extension type Permissions._(JSObject _) implements JSObject {
   external JSPromise<PermissionStatus> query(JSObject permissionDesc);
 }
 
+extension type PermissionDescriptor._(JSObject _) implements JSObject {
+  external factory PermissionDescriptor({required String name});
+
+  external set name(String value);
+  external String get name;
+}
+
 /// The **`PermissionStatus`** interface of the
 /// [Permissions API](https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API)
 /// provides the state of an object and an event handler for monitoring changes
